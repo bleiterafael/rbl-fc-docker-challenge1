@@ -1,0 +1,11 @@
+FROM golang:alpine AS builder
+RUN mkdir /app
+ADD app /app/
+WORKDIR /app
+RUN go env -w GO111MODULE=off
+RUN go build -o main .
+
+
+FROM scratch
+COPY --from=builder app .
+ENTRYPOINT ["/main"]

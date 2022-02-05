@@ -3,6 +3,8 @@ Docker - Challenge 1
 
 Non-optimazing image (317 MB):
 docker pull bleiterafael/fc-docker-challenge1:latest
+docker run -it --rm --name challenge1 bleiterafael/fc-docker-challenge1
 
 Optimazing image (1.77 MB):
 docker pull bleiterafael/fc-docker-challenge1:prod
+docker run -it --rm --name challenge1 bleiterafael/fc-docker-challenge1:prod
